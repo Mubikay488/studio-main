@@ -68,7 +68,7 @@ export function Hero() {
               {/* Image */}
               <div className="relative z-10 rounded-full overflow-hidden w-64 h-72 md:w-72 md:h-80 lg:w-80 lg:h-96 shadow-2xl">
                 <Image
-                  src="/profile.jpg/Mubby2.jpg"
+                  src="/Mubby2.jpg"
                   alt={heroData.name}
                   width={320}
                   height={400}
