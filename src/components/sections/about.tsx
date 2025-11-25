@@ -4,10 +4,9 @@ import { SkillsChart } from '@/components/skills-chart';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Briefcase, GraduationCap } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import placeholderImagesData from '@/lib/placeholder-images.json';
 
 export function About() {
-  const avatarImage = placeholderImagesData.placeholderImages.find(p => p.id === 'avatar');
+  const avatarSrc = '/Mubby2.jpg';
 
   return (
     <section id="about" className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -16,12 +15,10 @@ export function About() {
         <div className="lg:col-span-3 space-y-8">
           <Card className="bg-card">
             <CardHeader className="flex flex-row items-center gap-4">
-              {avatarImage && (
-                <Avatar className="h-20 w-20">
-                  <AvatarImage src={avatarImage.imageUrl} alt={aboutData.name} data-ai-hint={avatarImage.imageHint} />
-                  <AvatarFallback>{aboutData.name.charAt(0)}</AvatarFallback>
-                </Avatar>
-              )}
+              <Avatar className="h-20 w-20">
+                <AvatarImage src={avatarSrc} alt={aboutData.name} />
+                <AvatarFallback>{aboutData.name.charAt(0)}</AvatarFallback>
+              </Avatar>
               <div className="flex-1">
                 <CardTitle className="font-headline text-2xl">{aboutData.name}</CardTitle>
                 <p className="text-sm text-muted-foreground">{aboutData.title}</p>
