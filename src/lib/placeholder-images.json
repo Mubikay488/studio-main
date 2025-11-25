@@ -1,0 +1,40 @@
+{
+  "placeholderImages": [
+    {
+      "id": "avatar",
+      "description": "A portrait of a smiling person.",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM2OTE5NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "project1",
+      "description": "A modern e-commerce storefront with various products on display.",
+      "imageUrl": "https://images.unsplash.com/photo-1634973357973-f2ed2657db3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxvbmxpbmUlMjBzdG9yZXxlbnwwfHx8fDE3NjM2NTk5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "online store"
+    },
+    {
+      "id": "project2",
+      "description": "A digital Kanban board application with cards organized into columns.",
+      "imageUrl": "https://images.unsplash.com/photo-1646066490251-1ec58df3d7f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0YXNrJTIwYm9hcmR8ZW58MHx8fHwxNzYzNzE3MTYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "task board"
+    },
+    {
+      "id": "project3",
+      "description": "An abstract, modern web design for a portfolio website.",
+      "imageUrl": "https://images.unsplash.com/photo-1559028012-481c04fa702d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3ZWIlMjBkZXNpZ258ZW58MHx8fHwxNzYzNjUzNjYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "web design"
+    },
+    {
+      "id": "project4",
+      "description": "A weather application interface showing a forecast.",
+      "imageUrl": "https://images.unsplash.com/photo-1582757557082-ad7fd99f7507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3ZWF0aGVyJTIwZm9yZWNhc3R8ZW58MHx8fHwxNzYzNjU1MzAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "weather forecast"
+    },
+    {
+      "id": "contact",
+      "description": "A well-organized desk with a laptop and other tech gadgets.",
+      "imageUrl": "https://images.unsplash.com/photo-1610641563856-4ec0223d7084?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkZXNrJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NjM3MTcxNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "desk technology"
+    }
+  ]
+}
