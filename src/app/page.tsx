@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/footer';
 import { Hero } from '@/components/sections/hero';
 import { About } from '@/components/sections/about';
 import { Projects } from '@/components/sections/projects';
-import { AiRecommender } from '@/components/sections/ai-recommender';
+// AiRecommender removed per request
 import { Contact } from '@/components/sections/contact';
 
 const sectionVariants = {
@@ -33,9 +33,7 @@ export default function Home() {
         <motion.div id="projects-section" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={sectionVariants}>
           <Projects />
         </motion.div>
-        <motion.div id="recommendations-section" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={sectionVariants}>
-          <AiRecommender />
-        </motion.div>
+        {/* Recommendations section removed */}
         <motion.div id="contact-section" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={sectionVariants}>
           <Contact />
         </motion.div>

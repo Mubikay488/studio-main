@@ -4,56 +4,57 @@
 
 @layer base {
   :root {
-    --background: 222 89% 11%;
-    --foreground: 210 40% 98%;
-    --card: 222 89% 15%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 89% 15%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 173 97% 48%;
-    --primary-foreground: 173 100% 10%;
-    --secondary: 217 33% 25%;
-    --secondary-foreground: 210 40% 90%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 210 40% 65%;
-    --accent: 340 95% 65%;
-    --accent-foreground: 340 100% 10%;
+    /* Dark background with stronger contrast and a richer blue primary */
+    --background: 220 30% 6%; /* very dark navy */
+    --foreground: 210 30% 96%;
+    --card: 220 25% 10%;
+    --card-foreground: 210 30% 94%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 210 30% 94%;
+    --primary: 215 95% 52%; /* rich blue */
+    --primary-foreground: 215 100% 98%;
+    --secondary: 215 30% 18%;
+    --secondary-foreground: 210 30% 90%;
+    --muted: 215 30% 14%;
+    --muted-foreground: 210 30% 68%;
+    --accent: 210 90% 60%; /* lighter blue accent */
+    --accent-foreground: 210 100% 6%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 25%;
-    --input: 217 33% 25%;
-    --ring: 173 97% 48%;
+    --border: 220 25% 14%;
+    --input: 220 25% 14%;
+    --ring: 215 95% 52%;
     --chart-1: 210 40% 98%;
-    --chart-2: 173 97% 48%;
+    --chart-2: 215 95% 52%;
     --chart-3: 210 40% 70%;
-    --chart-4: 173 97% 68%;
+    --chart-4: 215 95% 68%;
     --chart-5: 210 40% 50%;
     --radius: 0.5rem;
   }
   .dark {
-    --background: 222 89% 11%;
-    --foreground: 210 40% 98%;
-    --card: 222 89% 15%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 89% 15%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 173 97% 48%;
-    --primary-foreground: 173 100% 10%;
-    --secondary: 217 33% 25%;
-    --secondary-foreground: 210 40% 90%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 210 40% 65%;
-    --accent: 340 95% 65%;
-    --accent-foreground: 340 100% 10%;
+    --background: 220 30% 6%;
+    --foreground: 210 30% 96%;
+    --card: 220 25% 10%;
+    --card-foreground: 210 30% 94%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 210 30% 94%;
+    --primary: 215 95% 52%;
+    --primary-foreground: 215 100% 98%;
+    --secondary: 215 30% 18%;
+    --secondary-foreground: 210 30% 90%;
+    --muted: 215 30% 14%;
+    --muted-foreground: 210 30% 68%;
+    --accent: 210 90% 60%;
+    --accent-foreground: 210 100% 6%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 25%;
-    --input: 217 33% 25%;
-    --ring: 173 97% 48%;
+    --border: 220 25% 14%;
+    --input: 220 25% 14%;
+    --ring: 215 95% 52%;
     --chart-1: 210 40% 98%;
-    --chart-2: 173 97% 48%;
+    --chart-2: 215 95% 52%;
     --chart-3: 210 40% 70%;
-    --chart-4: 173 97% 68%;
+    --chart-4: 215 95% 68%;
     --chart-5: 210 40% 50%;
   }
 }
@@ -65,4 +66,53 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes subtle-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.skills-canvas { animation: subtle-spin 60s linear infinite; }
+.floaty { animation: floaty 4s ease-in-out infinite; }
+
+/* Starfield used in SkillsChart */
+.starfield {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+.starfield .star {
+  position: absolute;
+  background: hsl(210 100% 100% / 0.9);
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow: 0 0 6px hsl(210 100% 80% / 0.12), 0 0 14px hsl(210 100% 80% / 0.06);
+  transform: translateZ(0);
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.25; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.15); }
+  100% { opacity: 0.3; transform: scale(0.9); }
+}
+
+.badge-blue {
+  border: 1px solid hsl(var(--primary) / 0.24);
+  background: linear-gradient(180deg, hsl(var(--primary) / 0.08), transparent 60%);
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 10px 30px hsl(var(--primary) / 0.08), inset 0 -6px 12px rgba(0,0,0,0.25);
+}
+
+.badge-blue:hover {
+  box-shadow: 0 18px 60px hsl(var(--primary) / 0.18), inset 0 -6px 12px rgba(0,0,0,0.28);
 }

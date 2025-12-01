@@ -1,13 +1,13 @@
-import type { Project, Skill, Experience, Education, NavLink, SocialLink, AboutData } from './types';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import type { Project, Skill, Experience, Education, NavLink, SocialLink, AboutData, Specialization } from './types';
+import { Github, Linkedin, Twitter, Code2, Smartphone, Play, Zap } from 'lucide-react';
 import placeholderImagesData from './placeholder-images.json';
 
 const placeholderImages = placeholderImagesData.placeholderImages;
 
 export const navLinks: NavLink[] = [
+  { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#recommendations', label: 'Recommendations' },
+  { href: '#projects', label: 'Project' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -68,13 +68,36 @@ export const projects: Project[] = [
 ];
 
 export const skills: Skill[] = [
-  { name: 'JavaScript / TypeScript', level: 80 },
-  { name: 'React / Next.js', level: 80 },
-  { name: 'Node.js / Express', level: 85 },
-  { name: 'Python / Django', level: 65 },
-  { name: 'SQL / NoSQL Databases', level: 70 },
-  { name: 'HTML / CSS / Tailwind CSS', level: 90 },
+  { name: 'JavaScript', level: 80 },
+  { name: 'TypeScript', level: 80 },
+  { name: 'React', level: 80 },
+  { name: 'Next.js', level: 80 },
+  { name: 'Node.js', level: 85 },
+  { name: 'Express', level: 85 },
+  { name: 'Python', level: 65 },
+  { name: 'Django', level: 65 },
+  { name: 'SQL', level: 70 },
+  { name: 'NoSQL', level: 70 },
+  { name: 'HTML', level: 90 },
+  { name: 'CSS', level: 90 },
+  { name: 'Tailwind CSS', level: 90 },
 ];
+
+export const skillImages: Record<string, string> = {
+  'JavaScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  'TypeScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+  'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  'Next.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+  'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  'Express': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+  'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  'Django': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg',
+  'SQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+  'NoSQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+  'HTML': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+  'CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+  'Tailwind CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
+};
 
 export const experiences: Experience[] = [
   {
@@ -91,4 +114,11 @@ export const education: Education[] = [
     institution: 'University of Ghana',
     period: '2024 - Present',
   },
+];
+
+export const specializations: Specialization[] = [
+  { title: 'Web Developer', icon: Code2 },
+  { title: 'React Native Developer', icon: Smartphone },
+  { title: 'YouTube Content Creator', icon: Play },
+  { title: 'Front End Engineer', icon: Zap },
 ];

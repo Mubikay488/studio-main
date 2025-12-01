@@ -44,3 +44,9 @@ export type AboutData = {
   title: string;
   bio: string;
 };
+
+export type Specialization = {
+  title: string;
+  description?: string;
+  icon: LucideIcon;
+};
